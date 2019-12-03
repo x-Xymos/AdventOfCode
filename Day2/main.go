@@ -19,14 +19,6 @@ func (result *Results) Close() {
 	})
 }
 
-func add(a *int, b *int) int {
-	return *a + *b
-}
-
-func multiply(a *int, b *int) int {
-	return *a * *b
-}
-
 func calculateInput(noun int, verb int, input []int, results *Results, wg *sync.WaitGroup) {
 	defer wg.Done()
 	input[1] = noun
